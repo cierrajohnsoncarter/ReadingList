@@ -10,6 +10,8 @@ What would you like to do?
 
 selected_input = input(menu_prompt).strip().lower()
 
+# Takes book info and adds it to a reading list
+
 
 def add_book():
     title = input('Title: ').strip().title()
@@ -19,6 +21,8 @@ def add_book():
     reading_list.append({
         'title': title, 'author': author, 'year': year})
 
+# Lists the books in the reading list
+
 
 def display_book():
     for book in reading_list:
@@ -26,6 +30,7 @@ def display_book():
         print(f'{title}, by{author} ({year})')
 
 
+# Runs 'add_book' and 'display_book' depending on user input and lets the user know if the reading list is empty
 while True:
     if selected_input == 'q':
         break
